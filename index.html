@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arsha MP — Flutter Developer</title>
+  <meta name="description"
+    content="Arsha MP — Flutter Developer with 3+ years building production-grade cross-platform apps." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+
+  <!-- ===== MOVING DOTS BACKGROUND ===== -->
+  <div class="dots-bg">
+    <div class="orb-dots">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="dots-grid"></div>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="logo">⟨<b>arsha</b>.dev⟩</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-tools">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content-wrapper">
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="home">
+      <div class="container hero-grid">
+        <!-- LEFT CONTENT -->
+        <div class="hero-content">
+          <h1>
+            Hi, I'm <span class="gradient-text">Arsha MP</span><br>
+            <span id="typing-text"></span><span class="cursor">|</span>
+          </h1>
+
+          <p class="bio">
+            I build <strong>production-grade, cross-platform apps</strong> with Flutter and Firebase —
+            from first commit to Play Store release. <strong>3+ years</strong> shipping for
+            e-commerce, logistics, ERP and fintech teams.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">View my work</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            <a href="./Arsha_MP_Resume.pdf" download class="btn btn-ghost">
+              Download CV
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-item"><span class="n">3+</span><span class="l">Years experience</span></div>
+            <div class="meta-item"><span class="n">6+</span><span class="l">Production apps</span></div>
+            <div class="meta-item"><span class="n">500+</span><span class="l">Daily transactions</span></div>
+            <div class="meta-item"><span class="n">4+</span><span class="l">User roles per app</span></div>
+          </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="hero-image">
+          <img src="./images/Arsha-profile_image.png" alt="Arsha MP">
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Career</span>
+          <h2>Experience log</h2>
+          <p>Two roles, one thread — taking Flutter apps from first screen to production, then keeping them healthy
+            after release.</p>
+        </div>
+
+        <div class="changelog">
+          <!-- Experience 1 -->
+          <article class="change-entry reveal">
+            <div class="change-version">
+              <span class="v">2025.06</span>
+              <span class="range">Jun 2025 — Present</span>
+              <span class="tag"><span class="dot"
+                  style="width:5px;height:5px;border-radius:50%;background:currentColor;"></span>Current</span>
+            </div>
+            <div class="change-body">
+              <h3>Flutter Developer</h3>
+              <span class="company">Euphoricoders · Kerala, India</span>
+              <ul>
+                <li>Leading Flutter development for a SaaS construction ERP platform used by 100+ users.</li>
+                <li>Built JWT-based authentication with role-based UI flows across 4+ user roles.</li>
+                <li>Integrated Razorpay payment gateway following clean architecture principles.</li>
+                <li>Cut app latency in data-heavy screens by 25% by optimising API integration.</li>
+                <li>Owned features end-to-end — from UI to Play Store release and post-launch monitoring.</li>
+              </ul>
+              <div class="change-tags">
+                <span>Flutter</span><span>Riverpod</span><span>REST
+                  API</span><span>Razorpay</span><span>Agile/Scrum</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 2 -->
+          <article class="change-entry reveal">
+            <div class="change-version">
+              <span class="v">2023.06</span>
+              <span class="range">Jun 2023 — Jun 2025</span>
+            </div>
+            <div class="change-body">
+              <h3>Flutter Developer · Mobile App Engineer</h3>
+              <span class="company">First Logic Meta Lab Pvt Ltd · Kerala, India</span>
+              <ul>
+                <li>Delivered 6+ production-grade apps used by 100+ active users across e-commerce, logistics and
+                  fintech.</li>
+                <li>Integrated Razorpay, OTP authentication, Firebase push notifications and Google Maps API.</li>
+                <li>Built multi-role apps for 4+ user types with real-time tracking using Flutter and Firebase.</li>
+                <li>Reduced API-related crashes by 40% with better token lifecycle management.</li>
+                <li>Automated workflows with Firebase Cloud Functions, cutting manual operations by 60%.</li>
+              </ul>
+              <div class="change-tags">
+                <span>Flutter</span><span>BLoC</span><span>Firebase</span><span>Google Maps</span><span>CI/CD</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section class="achievements">
+      <div class="container">
+        <div class="achieve-grid reveal">
+          <div class="achieve-card"><span class="n">6+</span>
+            <p>Production apps shipped, serving 100+ active users</p>
+          </div>
+          <div class="achieve-card"><span class="n">60%</span>
+            <p>Reduction in manual operations with Cloud Functions</p>
+          </div>
+          <div class="achieve-card"><span class="n">40%</span>
+            <p>Fewer API-related crashes after token rework</p>
+          </div>
+          <div class="achieve-card"><span class="n">4+</span>
+            <p>User roles supported per app</p>
+          </div>
+          <div class="achieve-card"><span class="n">100%</span>
+            <p>Play Store release ownership across multiple apps</p>
+          </div>
+          <div class="achieve-card"><span class="n">3+</span>
+            <p>Years of real-world Flutter experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Selected work</span>
+          <h2>Apps I've shipped</h2>
+          <p>A few of the products behind those numbers — spanning ERP, e-commerce, and fintech — built and shipped as
+            part of a product team.</p>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- CivilAcquire -->
+          <div class="project-card reveal has-gallery">
+            <div class="project-gallery" data-gallery aria-roledescription="carousel"
+              aria-label="CivilAcquire app screenshots">
+              <div class="gallery-track">
+                <button class="gallery-slide" data-index="0" aria-label="Open screenshot 1 of 5">
+                  <img src="./images/civilacaquire/screenshot1.png" alt="CivilAcquire estimation request screen"
+                    loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="1" aria-label="Open screenshot 2 of 5">
+                  <img src="./images/civilacaquire/screenshot2.png" alt="CivilAcquire 2D and 3D design preview screen"
+                    loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="2" aria-label="Open screenshot 3 of 5">
+                  <img src="./images/civilacaquire/screenshot3.png"
+                    alt="CivilAcquire subscription and membership screen" loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="3" aria-label="Open screenshot 4 of 5">
+                  <img src="./images/civilacaquire/screenshot4.png" alt="CivilAcquire wallet and payments screen"
+                    loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="4" aria-label="Open screenshot 5 of 5">
+                  <img src="./images/civilacaquire/screenshot5.png" alt="CivilAcquire wallet and payments screen"
+                    loading="lazy">
+                </button>
+              </div>
+              <button class="gallery-arrow prev" data-dir="-1" aria-label="Previous screenshot"><i
+                  class="fa-solid fa-chevron-left"></i></button>
+              <button class="gallery-arrow next" data-dir="1" aria-label="Next screenshot"><i
+                  class="fa-solid fa-chevron-right"></i></button>
+              <div class="gallery-dots"></div>
+            </div>
+
+            <div class="project-top">
+              <div class="project-icon" style="background:linear-gradient(135deg,#2F6FED,#1D4FC4);">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <span class="project-role">Lead developer</span>
+            </div>
+
+            <h3>CivilAcquire — 2D/3D Interior Estimation ERP</h3>
+            <p>
+              <strong>Built at Euphoricoders Private Limited</strong> — Full-scale construction ERP platform for 2D/3D
+              interior estimation.
+              Led development of the Flutter application with Node.js API integration, covering estimation workflows,
+              order management, subscriptions, and a wallet-based payment system using Razorpay.
+            </p>
+
+            <div class="project-tags">
+              <span>Flutter</span><span>Node.js API</span><span>Razorpay</span>
+              <span>Firebase</span><span>Subscriptions</span><span>2D/3D Estimation</span>
+            </div>
+
+            <div class="project-links">
+              <a class="store-badge play-badge"
+                href="https://play.google.com/store/apps/details?id=com.euphoricoders.civilacquire&hl=en"
+                target="_blank" rel="noopener" aria-label="Get it on Google Play">
+                <i class="fa-brands fa-google-play"></i>
+                <span class="badge-text"><small>GET IT ON</small>Google Play</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- TharaCart -->
+          <div class="project-card reveal has-gallery">
+            <div class="project-gallery" data-gallery aria-roledescription="carousel"
+              aria-label="TharaCart app screenshots">
+              <div class="gallery-track">
+                <button class="gallery-slide" data-index="0" aria-label="Open screenshot 1 of 4">
+                  <img src="./images/tharacart_app_screenshot.png" alt="TharaCart customer app home screen"
+                    loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="1" aria-label="Open screenshot 2 of 4">
+                  <img src="./images/tharacart_screenshot1.png" alt="TharaCart product listing screen" loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="2" aria-label="Open screenshot 3 of 4">
+                  <img src="./images/tharacart_screenshot2.png" alt="TharaCart cart and checkout screen" loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="3" aria-label="Open screenshot 4 of 4">
+                  <img src="./images/tharacart_screenshot3.png" alt="TharaCart order tracking screen" loading="lazy">
+                </button>
+              </div>
+              <button class="gallery-arrow prev" data-dir="-1" aria-label="Previous screenshot"><i
+                  class="fa-solid fa-chevron-left"></i></button>
+              <button class="gallery-arrow next" data-dir="1" aria-label="Next screenshot"><i
+                  class="fa-solid fa-chevron-right"></i></button>
+              <div class="gallery-dots"></div>
+            </div>
+
+            <div class="project-top">
+              <div class="project-icon" style="background:linear-gradient(135deg,#F97359,#D9502F);">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <span class="project-role">Flutter developer</span>
+            </div>
+
+            <h3>TharaCart — B2B &amp; B2C Marketplace</h3>
+            <p>
+              <strong>Built at Firstlogic MetaLab</strong> — Developed a scalable e-commerce mobile application focused
+              on
+              seamless product discovery and checkout experience.
+              Implemented dynamic cart management, secure payment integration, and real-time order tracking using
+              Flutter
+              and backend APIs.
+              Enhanced user engagement and reduced checkout friction through optimized UI and smooth navigation flow.
+            </p>
+
+            <div class="project-tags">
+              <span>Flutter</span><span>Node.js API</span><span>Firebase</span>
+              <span>B2B</span><span>B2C</span><span>Admin Panel</span><span>Web</span>
+            </div>
+
+            <div class="project-links">
+              <a class="store-badge play-badge"
+                href="https://play.google.com/store/apps/details?id=com.firstlogicinfolab.thara_cart_customer"
+                target="_blank" rel="noopener" aria-label="Get it on Google Play">
+                <i class="fa-brands fa-google-play"></i>
+                <span class="badge-text"><small>GET IT ON</small>Google Play</span>
+              </a>
+              <a class="store-badge apple-badge"
+                href="https://apps.apple.com/in/app/thara-cart-marketplace/id1639992424" target="_blank" rel="noopener"
+                aria-label="Download on the App Store">
+                <i class="fa-brands fa-apple"></i>
+                <span class="badge-text"><small>Download on the</small>App Store</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- DCost -->
+          <div class="project-card reveal has-gallery">
+            <div class="project-gallery" data-gallery aria-roledescription="carousel"
+              aria-label="DCost app screenshots">
+              <div class="gallery-track">
+                <button class="gallery-slide" data-index="0" aria-label="Open screenshot 1 of 5">
+                  <img src="./images/dcost_app.png" alt="DCost location and nearby malls screen" loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="1" aria-label="Open screenshot 2 of 5">
+                  <img src="./images/dcost_app1_screenshot.png" alt="DCost mall product listing screen" loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="2" aria-label="Open screenshot 3 of 5">
+                  <img src="./images/dcost_app2_screenshot.png" alt="DCost product detail screen" loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="3" aria-label="Open screenshot 4 of 5">
+                  <img src="./images/dcost_app3_screenshot.png" alt="DCost order screen" loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="4" aria-label="Open screenshot 5 of 5">
+                  <img src="./images/dcost_app4_screenshot.png" alt="DCost order screen" loading="lazy">
+                </button>
+              </div>
+              <button class="gallery-arrow prev" data-dir="-1" aria-label="Previous screenshot"><i
+                  class="fa-solid fa-chevron-left"></i></button>
+              <button class="gallery-arrow next" data-dir="1" aria-label="Next screenshot"><i
+                  class="fa-solid fa-chevron-right"></i></button>
+              <div class="gallery-dots"></div>
+            </div>
+
+            <div class="project-top">
+              <div class="project-icon" style="background:linear-gradient(135deg,#16A34A,#0F7A38);">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <span class="project-role">Flutter developer</span>
+            </div>
+
+            <h3>DCost — Location-Based Mall &amp; Commerce Platform</h3>
+            <p>
+              <strong>Built at First Logic Meta Lab</strong> — Developed a location-based commerce platform enabling
+              users
+              to discover nearby malls and browse store products directly within the app.
+              Built a multi-platform system including customer, merchant, and admin applications with full product and
+              order management capabilities.
+              Improved store visibility and streamlined operations through a unified digital ecosystem.
+            </p>
+
+            <div class="project-tags">
+              <span>Flutter</span><span>Firebase</span><span>Location Services</span>
+              <span>Multi-role</span><span>Merchant App</span>
+            </div>
+
+            <div class="project-links">
+              <a class="store-badge apple-badge" href="https://apps.apple.com/us/app/dcost-app/id6449982448"
+                target="_blank" rel="noopener" aria-label="Download on the App Store">
+                <i class="fa-brands fa-apple"></i>
+                <span class="badge-text"><small>Download on the</small>App Store</span>
+              </a>
+              <a class="store-badge play-badge"
+                href="https://play.google.com/store/apps/details?id=com.firstlogicinfolab.dcost_customerApp&hl=en_IN"
+                target="_blank" rel="noopener" aria-label="Get the customer app on Google Play">
+                <i class="fa-brands fa-google-play"></i>
+                <span class="badge-text"><small>GET IT ON</small>Google Play</span>
+              </a>
+              <a class="store-badge play-badge"
+                href="https://play.google.com/store/apps/details?id=com.firstlogicinfolab.dcostmerchantapp&hl=en_IN"
+                target="_blank" rel="noopener" aria-label="Get the merchant app on Google Play">
+                <i class="fa-brands fa-google-play"></i>
+                <span class="badge-text"><small>MERCHANT APP</small>Google Play</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- VivlinoShop -->
+          <div class="project-card reveal has-gallery">
+            <div class="project-gallery" data-gallery aria-roledescription="carousel"
+              aria-label="VivlinoShop app screenshots">
+              <div class="gallery-track">
+                <button class="gallery-slide" data-index="0" aria-label="Open screenshot 1 of 3">
+                  <img src="./images/vivlinoshop_app.png" alt="VivlinoShop home screen" loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="1" aria-label="Open screenshot 2 of 3">
+                  <img src="./images/vivlinoshop1.png" alt="VivlinoShop customer credit book screen" loading="lazy">
+                </button>
+                <button class="gallery-slide" data-index="2" aria-label="Open screenshot 3 of 3">
+                  <img src="./images/vivlinoshop2.png" alt="VivlinoShop repayment screen" loading="lazy">
+                </button>
+              </div>
+              <button class="gallery-arrow prev" data-dir="-1" aria-label="Previous screenshot"><i
+                  class="fa-solid fa-chevron-left"></i></button>
+              <button class="gallery-arrow next" data-dir="1" aria-label="Next screenshot"><i
+                  class="fa-solid fa-chevron-right"></i></button>
+              <div class="gallery-dots"></div>
+            </div>
+
+            <div class="project-top">
+              <div class="project-icon" style="background:linear-gradient(135deg,#A855F7,#7C3AED);">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <span class="project-role">Flutter developer</span>
+            </div>
+
+            <h3>VivlinoShop — Digital Credit &amp; Khata App</h3>
+            <p>
+              <strong>Built at First Logic Meta Lab</strong> — Developed a digital khata platform connecting shop owners
+              with their credit customers for seamless credit tracking and repayments.
+              Implemented features including customer-wise ledgers, partial payments, cash settlements, in-app offers,
+              and
+              real-time notifications.
+              Improved credit management efficiency and enabled faster, transparent transactions between businesses and
+              customers.
+            </p>
+
+            <div class="project-tags">
+              <span>Flutter</span><span>Firebase</span><span>Push Notifications</span>
+              <span>Payments</span><span>Ledger Management</span>
+            </div>
+
+            <div class="project-links">
+              <a class="store-badge play-badge"
+                href="https://play.google.com/store/apps/details?id=com.firstlogicmetalab.vivlino_cust&hl=en_IN"
+                target="_blank" rel="noopener" aria-label="Get it on Google Play">
+                <i class="fa-brands fa-google-play"></i>
+                <span class="badge-text"><small>GET IT ON</small>Google Play</span>
+              </a>
+              <a class="store-badge apple-badge" href="https://apps.apple.com/us/app/vivlino-shop/id6472438904"
+                target="_blank" rel="noopener" aria-label="Download on the App Store">
+                <i class="fa-brands fa-apple"></i>
+                <span class="badge-text"><small>Download on the</small>App Store</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== SUBHEAD FOR INTERNAL PROJECTS ===== -->
+        <div class="project-subhead reveal">
+          <span class="eyebrow">Also built</span>
+          <p>Internal tools and concept work — not publicly listed, but shipped and used in production.</p>
+        </div>
+
+        <div class="project-grid">
+          <!-- Nexora -->
+          <div class="project-card reveal">
+            <div class="project-top">
+              <div class="project-icon" style="background:linear-gradient(135deg,#EAB308,#CA8A04);">
+                <i class="fa-solid fa-city"></i>
+              </div>
+              <span class="project-role">UI/UX &amp; Flutter developer</span>
+            </div>
+            <h3>Nexora — Land &amp; Construction Franchise App</h3>
+            <p>
+              <strong>Built at Euphoricoders Private Limited</strong> — Concept-stage franchise real estate app.
+              Designed and developed the complete UI in Flutter, focusing on user flows, layout structure, and scalable
+              interface design, prior to backend development.
+            </p>
+            <div class="project-tags">
+              <span>Flutter</span><span>UI/UX Design</span><span>Franchise Model</span>
+              <span>Concept Stage</span>
+            </div>
+            <div class="project-status">
+              <i class="fa-solid fa-pen-ruler"></i> UI concept — development not yet started
+            </div>
+          </div>
+
+          <!-- TharaCart Operations -->
+          <div class="project-card reveal">
+            <div class="project-top">
+              <div class="project-icon" style="background:linear-gradient(135deg,#F97359,#D9502F);">
+                <i class="fa-solid fa-truck-fast"></i>
+              </div>
+              <span class="project-role">Flutter developer</span>
+            </div>
+            <h3>TharaCart Operations — Warehouse, Driver &amp; Sales Apps</h3>
+            <p>
+              <strong>Built at First Logic Meta Lab</strong> — Internal operations suite for the TharaCart marketplace.
+              Designed and developed the complete UI in Flutter, with REST API integration
+              across warehouse, driver, and sales management applications.
+            </p>
+            <div class="project-tags">
+              <span>Flutter</span><span>Node.js API</span><span>REST API</span>
+              <span>Multi-role</span><span>Internal Tool</span>
+            </div>
+            <div class="project-status">
+              <i class="fa-solid fa-lock"></i> Internal company tool — not publicly released
+            </div>
+          </div>
+
+          <!-- Construction DMS -->
+          <div class="project-card reveal project-card--wide">
+            <div class="project-top">
+              <div class="project-icon" style="background:linear-gradient(135deg,#0EA5E9,#0369A1);">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="project-role">Flutter developer</span>
+            </div>
+
+            <h3>Construction DMS — Field &amp; Admin Management System</h3>
+
+            <div class="project-desc">
+              <p>
+                <strong>Built at Euphoricoders Private Limited</strong> — Dual-application system for managing EMI-based
+                house construction operations across districts.
+                Designed and developed the complete UI in Flutter, with REST API integration and authentication for both
+                field (DMS) and admin applications, covering project tracking, site updates, and operational management.
+              </p>
+            </div>
+
+            <div class="project-tags">
+              <span>Flutter</span><span>Node.js API</span><span>REST API</span>
+              <span>OTP Auth</span><span>Employee Management</span><span>Internal Tool</span>
+            </div>
+
+            <div class="project-status">
+              <i class="fa-solid fa-lock"></i> Internal company tool — not publicly released
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Toolbox</span>
+          <h2>Technical skills</h2>
+          <p>Technologies I use regularly, along with areas I'm actively developing.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Mobile Development -->
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" style="background: #02569B;">
+                <i class="devicon-flutter-plain" style="color: white; font-size: 1.5rem;"></i>
+              </span>
+              <h4>Mobile Development</h4>
+            </div>
+            <div class="items">
+              <span>Flutter</span><span>Dart</span><span>Android</span><span>iOS</span><span>Web</span>
+            </div>
+          </div>
+
+          <!-- State Management -->
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" style="background: #7C4DFF;">
+                <i class="devicon-flutter-plain" style="color: white; font-size: 1.5rem;"></i>
+              </span>
+              <h4>State Management</h4>
+            </div>
+            <div class="items">
+              <span>Riverpod</span><span>BLoC</span><span>Provider</span><span>Cubit</span>
+            </div>
+          </div>
+
+          <!-- API & Authentication -->
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" style="background: #E10098;">
+                <i class="devicon-dart-plain" style="color: white; font-size: 1.5rem;"></i>
+              </span>
+              <h4>API &amp; Authentication</h4>
+            </div>
+            <div class="items">
+              <span>REST APIs</span><span>JWT</span><span>OTP Authentication</span><span>Razorpay</span>
+            </div>
+          </div>
+
+          <!-- Firebase -->
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" style="background: #FFA000;">
+                <i class="devicon-firebase-plain" style="color: white; font-size: 1.5rem;"></i>
+              </span>
+              <h4>Firebase</h4>
+            </div>
+            <div class="items">
+              <span>Firestore</span><span>Authentication</span><span>Cloud Functions</span><span>Push
+                Notifications</span>
+            </div>
+          </div>
+
+          <!-- Architecture & Design -->
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" style="background: #673AB7;">
+                <i class="devicon-android-plain" style="color: white; font-size: 1.5rem;"></i>
+              </span>
+              <h4>Architecture &amp; Design</h4>
+            </div>
+            <div class="items">
+              <span>Clean Architecture</span><span>MVVM</span><span>MVC</span><span>SOLID Principles</span>
+            </div>
+          </div>
+
+          <!-- Backend & Data -->
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" style="background: #339933;">
+                <i class="devicon-nodejs-plain" style="color: white; font-size: 1.5rem;"></i>
+              </span>
+              <h4>Backend &amp; Data</h4>
+            </div>
+            <div class="items">
+              <span>SQLite</span><span>PostgreSQL</span><span>MongoDB</span><span>Node.js</span><span>Express.js</span>
+            </div>
+          </div>
+
+          <!-- Tools & Testing -->
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" style="background: #F05032;">
+                <i class="devicon-git-plain" style="color: white; font-size: 1.5rem;"></i>
+              </span>
+              <h4>Tools &amp; Testing</h4>
+            </div>
+            <div class="items">
+              <span>Git</span><span>Postman</span><span>Unit Testing</span><span>Widget Testing</span>
+            </div>
+          </div>
+
+          <!-- Deployment & Delivery -->
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" style="background: #34A853; position: relative;">
+                <i class="devicon-google-plain" style="color: white; font-size: 1.5rem;"></i>
+              </span>
+              <h4>Deployment &amp; Delivery</h4>
+            </div>
+            <div class="items">
+              <span>Play Store Deployment</span>
+              <span>App Store Deployment</span>
+              <span>CI/CD</span>
+              <span>Beta Rollouts</span>
+              <span>TestFlight</span>
+            </div>
+          </div>
+
+          <!-- Ways of Working -->
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" style="background: #0052CC;">
+                <i class="devicon-jira-plain" style="color: white; font-size: 1.5rem;"></i>
+              </span>
+              <h4>Ways of Working</h4>
+            </div>
+            <div class="items">
+              <span>Agile</span><span>Scrum</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Toolbox</span>
+          <h2>Technical skills</h2>
+          <p>Technologies I use regularly, along with areas I'm actively developing.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+              <h4>Mobile Development</h4>
+            </div>
+            <div class="items">
+              <span>Flutter</span><span>Dart</span><span>Android</span><span>iOS</span><span>Web</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><i class="fa-solid fa-diagram-project"></i></span>
+              <h4>State Management</h4>
+            </div>
+            <div class="items">
+              <span>Riverpod</span><span>BLoC</span><span>Provider</span><span>Cubit</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><i class="fa-solid fa-key"></i></span>
+              <h4>API &amp; Authentication</h4>
+            </div>
+            <div class="items">
+              <span>REST APIs</span><span>JWT</span><span>OTP Authentication</span><span>Razorpay</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><i class="fa-solid fa-fire"></i></span>
+              <h4>Firebase</h4>
+            </div>
+            <div class="items">
+              <span>Firestore</span><span>Authentication</span><span>Cloud Functions</span><span>Push Notifications</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><i class="fa-solid fa-drafting-compass"></i></span>
+              <h4>Architecture &amp; Design</h4>
+            </div>
+            <div class="items">
+              <span>Clean Architecture</span><span>MVVM</span><span>MVC</span><span>SOLID Principles</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><i class="fa-solid fa-database"></i></span>
+              <h4>Backend &amp; Data</h4>
+            </div>
+            <div class="items">
+              <span>SQLite</span><span>PostgreSQL</span><span>MongoDB</span><span>Node.js</span><span>Express.js</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><i class="fa-solid fa-vial"></i></span>
+              <h4>Tools &amp; Testing</h4>
+            </div>
+            <div class="items">
+              <span>Git</span><span>Postman</span><span>Unit Testing</span><span>Widget Testing</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><i class="fa-solid fa-rocket"></i></span>
+              <h4>Deployment &amp; Delivery</h4>
+            </div>
+            <div class="items">
+              <span>Play Store Deployment</span><span>CI/CD</span><span>Beta Rollouts</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><i class="fa-solid fa-people-group"></i></span>
+              <h4>Ways of Working</h4>
+            </div>
+            <div class="items">
+              <span>Agile</span><span>Scrum</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section> -->
+
+
+
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Background</span>
+          <h2>Education</h2>
+        </div>
+        <div class="edu-list">
+          <div class="edu-card reveal">
+            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="edu-info">
+              <h4>Bachelor of Computer Application</h4>
+              <span class="school"><i class="fa-solid fa-location-dot"></i> Calicut University, Kerala</span>
+            </div>
+            <div class="edu-side">
+              <span class="yr">2020 — 2023</span>
+              <span class="edu-tag">Undergraduate</span>
+            </div>
+          </div>
+          <div class="edu-card reveal">
+            <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="edu-info">
+              <h4>Higher Secondary — Computer Science</h4>
+              <span class="school"><i class="fa-solid fa-location-dot"></i> GVHSS Cherpulassery, Kerala</span>
+            </div>
+            <div class="edu-side">
+              <span class="yr">2018 — 2020</span>
+              <span class="edu-tag">Higher Secondary</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <div class="contact reveal">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Let's build something for production.</h2>
+        <p>Open to Flutter roles and freelance builds — happy to talk through your app, timeline, or team.</p>
+        <a href="mailto:arshanishad5@gmail.com" class="btn btn-primary">
+          <i class="fa-regular fa-envelope"></i> arshanishad5@gmail.com
+        </a>
+        <div class="contact-links">
+          <a href="tel:+917559833708"><i class="fa-solid fa-phone"></i> +91 75598 33708</a>
+          <a href="https://github.com/Arshanishad" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>
+            GitHub</a>
+          <a href="https://linkedin.com/in/arshamp-683a502b7" target="_blank" rel="noopener"><i
+              class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          <span><i class="fa-solid fa-location-dot"></i> Palakkad, Kerala</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>© <span id="year"></span> Arsha MP · Built with Flutter-grade attention to detail.</p>
+    </footer>
+
+  </div>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close preview"><i
+        class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-arrow prev" id="lightboxPrev" aria-label="Previous screenshot"><i
+        class="fa-solid fa-chevron-left"></i></button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-arrow next" id="lightboxNext" aria-label="Next screenshot"><i
+        class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="script.js"></script>
+</body>
+
+</html>
