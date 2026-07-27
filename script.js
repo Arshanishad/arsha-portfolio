@@ -65,17 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   /* ========== SCROLL REVEAL ========== */
-  const revealEls = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('is-visible'), i * 60);
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  revealEls.forEach(el => revealObserver.observe(el));
+ 
 
 
 /* ========== GITHUB CONTRIBUTIONS ========== */
