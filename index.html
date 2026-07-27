@@ -18,7 +18,7 @@
   <meta name="robots" content="index, follow" />
 
   <!-- ===== CANONICAL ===== -->
-  <link rel="canonical" href="https://arsha.netlify.app/" />
+  <link rel="canonical" href="https://arshampportfolio.netlify.app/" />
 
   <!-- ===== FAVICON ===== -->
   <link rel="icon" href="/favicon.ico" />
@@ -27,8 +27,8 @@
   <meta property="og:title" content="Arsha MP | Flutter Developer Portfolio" />
   <meta property="og:description"
     content="Flutter Developer with 3+ years of experience building production apps." />
-  <meta property="og:image" content="https://arsha.netlify.app/assets/profile.jpg" />
-  <meta property="og:url" content="https://arsha.netlify.app/" />
+<meta property="og:image" content="https://arshampportfolio.netlify.app/images/Arsha-profile_image.png" />
+<meta property="og:url" content="https://arshampportfolio.netlify.app/" />
   <meta property="og:type" content="website" />
 
   <!-- ===== TWITTER ===== -->
@@ -36,23 +36,29 @@
   <meta name="twitter:title" content="Arsha MP | Flutter Developer Portfolio" />
   <meta name="twitter:description"
     content="Flutter Developer with 3+ years experience." />
-  <meta name="twitter:image" content="https://arsha.netlify.app/assets/profile.jpg" />
+ <meta name="twitter:image" content="https://arshampportfolio.netlify.app/images/Arsha-profile_image.png" />
 
   <!-- ===== STRUCTURED DATA ===== -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Arsha MP",
-    "url": "https://arsha.netlify.app/",
-    "image": "https://arsha.netlify.app/assets/images/Arsha_MP_Resume.pdf,
-    "jobTitle": "Flutter Developer",
-    "description": "Flutter Developer with 3+ years of experience building cross-platform mobile applications.",
-    "sameAs": [
-      "https://github.com/Arshanishad",
-      "https://linkedin.com/in/arshamp-683a502b7"
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Arsha MP",
+  "url": "https://arshampportfolio.netlify.app/",
+  "image": "https://arshampportfolio.netlify.app/assets/images/Arsha-profile_image.png",
+  "jobTitle": "Flutter Developer",
+  "sameAs": [
+    "https://github.com/Arshanishad",
+    "https://linkedin.com/in/arshamp-683a502b7"
+  ],
+  "knowsAbout": [
+    "Flutter",
+    "Dart",
+    "Firebase",
+    "REST API",
+    "Mobile App Development"
+  ]
+}
   </script>
 
   <!-- ===== FONTS ===== -->
@@ -93,6 +99,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#github">GitHub</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-tools">
@@ -128,7 +135,7 @@
           <div class="hero-actions">
             <a href="#work" class="btn btn-primary">View my work</a>
             <a href="#contact" class="btn btn-ghost">Get in touch</a>
-            <a href="./Arsha_MP_Resume.pdf" download class="btn btn-ghost">
+            <a href="./images/Arsha_MP_Resume.pdf" download class="btn btn-ghost">
               Download CV
             </a>
           </div>
@@ -143,7 +150,7 @@
 
         <!-- RIGHT IMAGE -->
         <div class="hero-image">
-          <img src="./images/Arsha-profile_image.png" alt="Arsha MP">
+          <img src="./images/Arsha-profile_image.png" alt="Arsha MP profile photo">
         </div>
       </div>
     </header>
@@ -729,109 +736,52 @@
         </div>
       </div>
     </section>
-    <!-- <section id="skills">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Toolbox</span>
-          <h2>Technical skills</h2>
-          <p>Technologies I use regularly, along with areas I'm actively developing.</p>
-        </div>
+<!-- ===== GITHUB ACTIVITY ===== -->
+<section id="github">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Open source</span>
+      <h2>GitHub activity</h2>
+      <p>My contribution history over the last year — commits, PRs, and reviews across personal and client work.</p>
+    </div>
 
-        <div class="skills-grid">
+    <div class="github-card reveal">
+      <div class="github-card-head">
+        <span id="ghTotal">Loading contributions…</span>
+        <a href="https://github.com/Arshanishad" target="_blank" rel="noopener" class="gh-link">
+          <i class="fa-brands fa-github"></i> View profile
+        </a>
+      </div>
 
-          <div class="skill-card reveal">
-            <div class="skill-card-head">
-              <span class="skill-icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
-              <h4>Mobile Development</h4>
+      <div class="gh-scroll">
+        <div class="gh-chart">
+          <div class="gh-months" id="ghMonths"></div>
+          <div class="gh-body">
+            <div class="gh-daylabels">
+              <span>Mon</span>
+              <span>Wed</span>
+              <span>Fri</span>
             </div>
-            <div class="items">
-              <span>Flutter</span><span>Dart</span><span>Android</span><span>iOS</span><span>Web</span>
-            </div>
+            <div id="ghGraph" class="gh-graph"></div>
           </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-card-head">
-              <span class="skill-icon"><i class="fa-solid fa-diagram-project"></i></span>
-              <h4>State Management</h4>
-            </div>
-            <div class="items">
-              <span>Riverpod</span><span>BLoC</span><span>Provider</span><span>Cubit</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-card-head">
-              <span class="skill-icon"><i class="fa-solid fa-key"></i></span>
-              <h4>API &amp; Authentication</h4>
-            </div>
-            <div class="items">
-              <span>REST APIs</span><span>JWT</span><span>OTP Authentication</span><span>Razorpay</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-card-head">
-              <span class="skill-icon"><i class="fa-solid fa-fire"></i></span>
-              <h4>Firebase</h4>
-            </div>
-            <div class="items">
-              <span>Firestore</span><span>Authentication</span><span>Cloud Functions</span><span>Push Notifications</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-card-head">
-              <span class="skill-icon"><i class="fa-solid fa-drafting-compass"></i></span>
-              <h4>Architecture &amp; Design</h4>
-            </div>
-            <div class="items">
-              <span>Clean Architecture</span><span>MVVM</span><span>MVC</span><span>SOLID Principles</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-card-head">
-              <span class="skill-icon"><i class="fa-solid fa-database"></i></span>
-              <h4>Backend &amp; Data</h4>
-            </div>
-            <div class="items">
-              <span>SQLite</span><span>PostgreSQL</span><span>MongoDB</span><span>Node.js</span><span>Express.js</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-card-head">
-              <span class="skill-icon"><i class="fa-solid fa-vial"></i></span>
-              <h4>Tools &amp; Testing</h4>
-            </div>
-            <div class="items">
-              <span>Git</span><span>Postman</span><span>Unit Testing</span><span>Widget Testing</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-card-head">
-              <span class="skill-icon"><i class="fa-solid fa-rocket"></i></span>
-              <h4>Deployment &amp; Delivery</h4>
-            </div>
-            <div class="items">
-              <span>Play Store Deployment</span><span>CI/CD</span><span>Beta Rollouts</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-card-head">
-              <span class="skill-icon"><i class="fa-solid fa-people-group"></i></span>
-              <h4>Ways of Working</h4>
-            </div>
-            <div class="items">
-              <span>Agile</span><span>Scrum</span>
-            </div>
-          </div>
-
         </div>
       </div>
-    </section> -->
+
+      <div class="gh-footer">
+        <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-contribution-settings-on-your-profile/viewing-contributions-on-your-profile" target="_blank" rel="noopener" class="gh-learn">Learn how we count contributions</a>
+        <div class="gh-legend">
+          <span>Less</span>
+          <span class="gh-cell" data-level="0"></span>
+          <span class="gh-cell" data-level="1"></span>
+          <span class="gh-cell" data-level="2"></span>
+          <span class="gh-cell" data-level="3"></span>
+          <span class="gh-cell" data-level="4"></span>
+          <span>More</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

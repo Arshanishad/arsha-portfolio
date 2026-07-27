@@ -77,6 +77,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealEls.forEach(el => revealObserver.observe(el));
 
+
+/* ========== GITHUB CONTRIBUTIONS ========== */
+(async () => {
+  const ghGraph = document.getElementById('ghGraph');
+  const ghMonths = document.getElementById('ghMonths');
+  const ghTotal = document.getElementById('ghTotal');
+  if (!ghGraph) return;
+
+  const username = 'Arshanishad'; // your GitHub username
+  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  try {
+    const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=last`);
+    const data = await res.json();
+    const days = data.contributions;
+
+    ghTotal.textContent = `${days.reduce((s, d) => s + d.count, 0).toLocaleString()} contributions in the last year`;
+
+    // Build week columns (Sun→Sat), padding start
+    const weeks = [];
+    let currentWeek = [];
+    days.forEach((day, i) => {
+      const dow = new Date(day.date).getDay();
+      if (i === 0) for (let j = 0; j < dow; j++) currentWeek.push(null);
+      currentWeek.push(day);
+      if (dow === 6) { weeks.push(currentWeek); currentWeek = []; }
+    });
+    if (currentWeek.length) weeks.push(currentWeek);
+
+    // Render cells
+    weeks.forEach(week => {
+      for (let d = 0; d < 7; d++) {
+        const day = week[d];
+        const cell = document.createElement('span');
+        cell.className = 'gh-cell';
+        if (day) {
+          cell.dataset.level = day.level;
+          cell.title = `${day.count} contribution${day.count === 1 ? '' : 's'} on ${day.date}`;
+        } else {
+          cell.style.visibility = 'hidden';
+        }
+        ghGraph.appendChild(cell);
+      }
+    });
+
+    // Render month labels aligned to week columns
+    let lastMonth = -1;
+    weeks.forEach(week => {
+      const firstRealDay = week.find(d => d);
+      if (!firstRealDay) return;
+      const month = new Date(firstRealDay.date).getMonth();
+      const label = document.createElement('span');
+      if (month !== lastMonth) {
+        label.textContent = monthNames[month];
+        lastMonth = month;
+      }
+      ghMonths.appendChild(label);
+    });
+  } catch (err) {
+    ghTotal.textContent = 'Could not load GitHub activity right now.';
+    console.error('GitHub contributions error:', err);
+  }
+})();
+
   /* ========== FOOTER YEAR ========== */
   document.getElementById('year').textContent = new Date().getFullYear();
 
