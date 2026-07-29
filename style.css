@@ -741,6 +741,25 @@ button { font: inherit; }
 }
 
 /* ===== EXPERIENCE ===== */
+
+.location-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.location-link:hover {
+  color: #007bff;
+}
+
+.location-link i {
+  font-size: 13px;
+  color: #888;
+}
 section {
   padding: 60px 0; 
 }
