@@ -65,71 +65,69 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   /* ========== SCROLL REVEAL ========== */
- 
 
+  /* ========== GITHUB CONTRIBUTIONS ========== */
+  (async () => {
+    const ghGraph = document.getElementById('ghGraph');
+    const ghMonths = document.getElementById('ghMonths');
+    const ghTotal = document.getElementById('ghTotal');
+    if (!ghGraph) return;
 
-/* ========== GITHUB CONTRIBUTIONS ========== */
-(async () => {
-  const ghGraph = document.getElementById('ghGraph');
-  const ghMonths = document.getElementById('ghMonths');
-  const ghTotal = document.getElementById('ghTotal');
-  if (!ghGraph) return;
+    const username = 'Arshanishad'; // your GitHub username
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  const username = 'Arshanishad'; // your GitHub username
-  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    try {
+      const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=last`);
+      const data = await res.json();
+      const days = data.contributions;
 
-  try {
-    const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=last`);
-    const data = await res.json();
-    const days = data.contributions;
+      ghTotal.textContent = `${days.reduce((s, d) => s + d.count, 0).toLocaleString()} contributions in the last year`;
 
-    ghTotal.textContent = `${days.reduce((s, d) => s + d.count, 0).toLocaleString()} contributions in the last year`;
+      // Build week columns (Sun→Sat), padding start
+      const weeks = [];
+      let currentWeek = [];
+      days.forEach((day, i) => {
+        const dow = new Date(day.date).getDay();
+        if (i === 0) for (let j = 0; j < dow; j++) currentWeek.push(null);
+        currentWeek.push(day);
+        if (dow === 6) { weeks.push(currentWeek); currentWeek = []; }
+      });
+      if (currentWeek.length) weeks.push(currentWeek);
 
-    // Build week columns (Sun→Sat), padding start
-    const weeks = [];
-    let currentWeek = [];
-    days.forEach((day, i) => {
-      const dow = new Date(day.date).getDay();
-      if (i === 0) for (let j = 0; j < dow; j++) currentWeek.push(null);
-      currentWeek.push(day);
-      if (dow === 6) { weeks.push(currentWeek); currentWeek = []; }
-    });
-    if (currentWeek.length) weeks.push(currentWeek);
-
-    // Render cells
-    weeks.forEach(week => {
-      for (let d = 0; d < 7; d++) {
-        const day = week[d];
-        const cell = document.createElement('span');
-        cell.className = 'gh-cell';
-        if (day) {
-          cell.dataset.level = day.level;
-          cell.title = `${day.count} contribution${day.count === 1 ? '' : 's'} on ${day.date}`;
-        } else {
-          cell.style.visibility = 'hidden';
+      // Render cells
+      weeks.forEach(week => {
+        for (let d = 0; d < 7; d++) {
+          const day = week[d];
+          const cell = document.createElement('span');
+          cell.className = 'gh-cell';
+          if (day) {
+            cell.dataset.level = day.level;
+            cell.title = `${day.count} contribution${day.count === 1 ? '' : 's'} on ${day.date}`;
+          } else {
+            cell.style.visibility = 'hidden';
+          }
+          ghGraph.appendChild(cell);
         }
-        ghGraph.appendChild(cell);
-      }
-    });
+      });
 
-    // Render month labels aligned to week columns
-    let lastMonth = -1;
-    weeks.forEach(week => {
-      const firstRealDay = week.find(d => d);
-      if (!firstRealDay) return;
-      const month = new Date(firstRealDay.date).getMonth();
-      const label = document.createElement('span');
-      if (month !== lastMonth) {
-        label.textContent = monthNames[month];
-        lastMonth = month;
-      }
-      ghMonths.appendChild(label);
-    });
-  } catch (err) {
-    ghTotal.textContent = 'Could not load GitHub activity right now.';
-    console.error('GitHub contributions error:', err);
-  }
-})();
+      // Render month labels aligned to week columns
+      let lastMonth = -1;
+      weeks.forEach(week => {
+        const firstRealDay = week.find(d => d);
+        if (!firstRealDay) return;
+        const month = new Date(firstRealDay.date).getMonth();
+        const label = document.createElement('span');
+        if (month !== lastMonth) {
+          label.textContent = monthNames[month];
+          lastMonth = month;
+        }
+        ghMonths.appendChild(label);
+      });
+    } catch (err) {
+      ghTotal.textContent = 'Could not load GitHub activity right now.';
+      console.error('GitHub contributions error:', err);
+    }
+  })();
 
   /* ========== FOOTER YEAR ========== */
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -182,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsContainer = gallery.querySelector('.gallery-dots');
     const prevBtn = gallery.querySelector('.gallery-arrow.prev');
     const nextBtn = gallery.querySelector('.gallery-arrow.next');
-    
+
     if (!slides.length) return;
 
     let currentIndex = 0;
@@ -213,8 +211,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Keyboard navigation
     gallery.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); goToSlide(currentIndex - 1); }
-      if (e.key === 'ArrowRight') { e.preventDefault(); goToSlide(currentIndex + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault();
+        goToSlide(currentIndex - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault();
+        goToSlide(currentIndex + 1); }
     });
 
     // Touch swipe support
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxClose = document.getElementById('lightboxClose');
   const lightboxPrev = document.getElementById('lightboxPrev');
   const lightboxNext = document.getElementById('lightboxNext');
-  
+
   let lightboxImages = [];
   let lightboxIndex = 0;
 
@@ -307,4 +307,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // The moving dots background is controlled entirely by CSS
   // No JavaScript needed - it's handled by the animation in style.css
   console.log('✨ Moving dots background active (CSS animation)');
+
 });
