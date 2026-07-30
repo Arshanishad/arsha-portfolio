@@ -211,10 +211,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Keyboard navigation
     gallery.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') { e.preventDefault();
-        goToSlide(currentIndex - 1); }
-      if (e.key === 'ArrowRight') { e.preventDefault();
-        goToSlide(currentIndex + 1); }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goToSlide(currentIndex - 1);
+      }
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        goToSlide(currentIndex + 1);
+      }
     });
 
     // Touch swipe support
@@ -292,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ========== SMOOTH SCROLL FOR NAV LINKS ========== */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
       const targetElement = document.querySelector(targetId);
